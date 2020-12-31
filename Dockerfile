@@ -16,4 +16,10 @@ RUN ./mariadb_install64
 # Clean up
 RUN rm ./maria* MARIADBLINUX25PACK64052b.zip
 
+# TODO: Support specifying webdevuser password (ideally from ENV?)
+# See https://forum.pcsoft.fr/en-US/pcsoft.fr.webdev/66428-serveur-application-webdev-24-docker/read.awp
+# Abstract:
+#   cat /etc/passwd | awk -F: '{print $1}'
+#   passwd webdevuser
+
 ENTRYPOINT ["/usr/local/WEBDEV/25.0/wd250admind", "--docker"]
