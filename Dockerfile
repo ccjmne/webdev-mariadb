@@ -1,4 +1,4 @@
-FROM windev/webdev:FR260056u
+FROM windev/webdev:FR260089p
 
 # Install the MariaDB client
 RUN apt-get update \
